@@ -33,22 +33,26 @@
             font-size: 28px;
         }
         .book-item {
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            padding: 20px;
             margin-bottom: 20px;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
         }
         .book-item a {
             display: block;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
         }
-        .book-item:active {
-            transform: translateX(3px);
-        }
-        .book-item:hover {
+        .book-item a:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            background: #f0f2f5;
+        }
+        .book-item a:active {
+            transform: translateX(3px);
+            background: #e8eaed;
         }
         .book-title {
             font-size: 20px;
@@ -79,128 +83,178 @@
         <h1>📚 读书合集</h1>
         
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483697&idx=1&sn=298543ace2f7ea8787e86027b0b4e14d&chksm=c4cb0868f3bc817e8241f2d05d5ed35433957263e44964515ebadf8b4e3a6339575641132597#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">25. 豆包AI时代创富</div></a>
-            <div class="book-desc">面向AI时代的创富指南。未来的"老板"，是那些会把AI当员工使用的人。教会读者如何利用AI工具提升效率、创造价值，在AI时代抓住新的财富机遇。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483697&idx=1&sn=298543ace2f7ea8787e86027b0b4e14d&chksm=c4cb0868f3bc817e8241f2d05d5ed35433957263e44964515ebadf8b4e3a6339575641132597#rd" target="_blank">
+                <div class="book-title">25. 《豆包AI时代创富》</div>
+                <div class="book-desc">面向AI时代的创富指南。未来的"老板"，是那些会把AI当员工使用的人。教会读者如何利用AI工具提升效率、创造价值，在AI时代抓住新的财富机遇。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483711&idx=1&sn=4b1db0b499f2706934427df0365b9304&chksm=c4cb0866f3bc8170747e9afe9d7b1dc1b81c730721b4a4cbd54255e4e689708bbaba638313d9#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">24. 借势</div></a>
-            <div class="book-desc">揭示借势的智慧——世界上总有"势"可以借，关键在于发现和利用。通过识别趋势、借助平台、整合资源，实现四两拨千斤的效果，加速个人成长。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483711&idx=1&sn=4b1db0b499f2706934427df0365b9304&chksm=c4cb0866f3bc8170747e9afe9d7b1dc1b81c730721b4a4cbd54255e4e689708bbaba638313d9#rd" target="_blank">
+                <div class="book-title">24. 《借势》</div>
+                <div class="book-desc">揭示借势的智慧——世界上总有"势"可以借，关键在于发现和利用。通过识别趋势、借助平台、整合资源，实现四两拨千斤的效果，加速个人成长。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483729&idx=1&sn=7a6777183b7a255fca76e97426f2367a&chksm=c4cb0808f3bc811e1a216f414195817f107614b765c7da69a7ab994ede2e176b581ff02439e2#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">23. 主角</div></a>
-            <div class="book-desc">一本让自己变得更值钱的成长指南。教导读者如何在人生舞台上成为主角，通过提升自我价值、建立核心竞争力，掌握人生的主动权。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483729&idx=1&sn=7a6777183b7a255fca76e97426f2367a&chksm=c4cb0808f3bc811e1a216f414195817f107614b765c7da69a7ab994ede2e176b581ff02439e2#rd" target="_blank">
+                <div class="book-title">23. 《主角》</div>
+                <div class="book-desc">一本让自己变得更值钱的成长指南。教导读者如何在人生舞台上成为主角，通过提升自我价值、建立核心竞争力，掌握人生的主动权。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483752&idx=1&sn=15bf082b63e9d79a28300f6d542371d1&chksm=c4cb0831f3bc8127e96258f712a5d4634837a57f3bbf48489ca2b4db6511e24e1d3c49d06c44#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">22. 不被大风吹倒</div></a>
-            <div class="book-desc">诺贝尔文学奖得主莫言的散文集，记录了他从小到大的人生态度和生活智慧。通过朴实真挚的文字，展现在时代变迁中如何保持内心的坚韧与从容。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483752&idx=1&sn=15bf082b63e9d79a28300f6d542371d1&chksm=c4cb0831f3bc8127e96258f712a5d4634837a57f3bbf48489ca2b4db6511e24e1d3c49d06c44#rd" target="_blank">
+                <div class="book-title">22. 《不被大风吹倒》</div>
+                <div class="book-desc">诺贝尔文学奖得主莫言的散文集，记录了他从小到大的人生态度和生活智慧。通过朴实真挚的文字，展现在时代变迁中如何保持内心的坚韧与从容。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483764&idx=1&sn=3803aa7cbd74892e0bfc2c7a45cee5c8&chksm=c4cb082df3bc813b81a22a14bd41f28b4f68864d61a8ea5b551d3b32438b9b938fd6c2d9e9d9#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">21. 从副业到自由职业</div></a>
-            <div class="book-desc">系统讲解如何从副业起步，逐步过渡到自由职业的完整路径。自由职业是未来每个人的终极目标，本书提供实用的策略和方法，帮助读者实现职业自由。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483764&idx=1&sn=3803aa7cbd74892e0bfc2c7a45cee5c8&chksm=c4cb082df3bc813b81a22a14bd41f28b4f68864d61a8ea5b551d3b32438b9b938fd6c2d9e9d9#rd" target="_blank">
+                <div class="book-title">21. 《从副业到自由职业》</div>
+                <div class="book-desc">系统讲解如何从副业起步，逐步过渡到自由职业的完整路径。自由职业是未来每个人的终极目标，本书提供实用的策略和方法，帮助读者实现职业自由。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483781&idx=1&sn=b8fb5cd220d96c7c5d99b748b10de285&chksm=c4cb08dcf3bc81ca8b1fce2200c7fb96fecba2bb4e6ea59c420933cbbe724c45d7e46a3116fa#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">20. 简单法则</div></a>
-            <div class="book-desc">来自"学术界乔布斯"前田约翰的十大简单法则。在复杂的世界中，简单是最高级的智慧。通过化繁为简的思维方式，提升工作效率和生活品质。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483781&idx=1&sn=b8fb5cd220d96c7c5d99b748b10de285&chksm=c4cb08dcf3bc81ca8b1fce2200c7fb96fecba2bb4e6ea59c420933cbbe724c45d7e46a3116fa#rd" target="_blank">
+                <div class="book-title">20. 《简单法则》</div>
+                <div class="book-desc">来自"学术界乔布斯"前田约翰的十大简单法则。在复杂的世界中，简单是最高级的智慧。通过化繁为简的思维方式，提升工作效率和生活品质。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483799&idx=1&sn=f4bb6faa05abbcddacff70977994e8bc&chksm=c4cb08cef3bc81d882d62f5e31be60d9a1f81148fd1683ad1199c69be485149f39fbec56d2c6#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">19. 一人公司</div></a>
-            <div class="book-desc">揭示未来10年普通人最佳的进阶方式——打造一人公司。在AI时代，个体创业者通过精简运营、专注价值创造，可以获得更大的自由度和更高的收益。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483799&idx=1&sn=f4bb6faa05abbcddacff70977994e8bc&chksm=c4cb08cef3bc81d882d62f5e31be60d9a1f81148fd1683ad1199c69be485149f39fbec56d2c6#rd" target="_blank">
+                <div class="book-title">19. 《一人公司》</div>
+                <div class="book-desc">揭示未来10年普通人最佳的进阶方式——打造一人公司。在AI时代，个体创业者通过精简运营、专注价值创造，可以获得更大的自由度和更高的收益。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483821&idx=1&sn=7bbcbe61ad5faf7b3bbb4479a703af58&chksm=c4cb08f4f3bc81e278ece7f04a178bdd0125fc599622ef9fbf74b82181cf02fdb23839a2bbcb#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">18. 想赢就要敢上场</div></a>
-            <div class="book-desc">周鸿祎关于公开表达和个人IP打造的实战指南，樊登、鲁豫等名人诚挚推荐。教导读者如何克服恐惧，勇敢展示自己，通过持续输出建立个人影响力。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483821&idx=1&sn=7bbcbe61ad5faf7b3bbb4479a703af58&chksm=c4cb08f4f3bc81e278ece7f04a178bdd0125fc599622ef9fbf74b82181cf02fdb23839a2bbcb#rd" target="_blank">
+                <div class="book-title">18. 《想赢就要敢上场》</div>
+                <div class="book-desc">周鸿祎关于公开表达和个人IP打造的实战指南，樊登、鲁豫等名人诚挚推荐。教导读者如何克服恐惧，勇敢展示自己，通过持续输出建立个人影响力。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483846&idx=1&sn=4d6277a67e739d70efa58ce820249fb3&chksm=c4cb089ff3bc8189fd4fe32603b18946d4e74ab14c3f4632421a4399bd8c2fa53f30a99fa178#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">17. 阅读写作 赋能美好人生</div></a>
-            <div class="book-desc">作者8年读写实践的精华总结，展示阅读与写作如何让内心丰盈、人生有方向。通过持续的读写修炼，实现个人成长和生活品质的全面提升。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483846&idx=1&sn=4d6277a67e739d70efa58ce820249fb3&chksm=c4cb089ff3bc8189fd4fe32603b18946d4e74ab14c3f4632421a4399bd8c2fa53f30a99fa178#rd" target="_blank">
+                <div class="book-title">17. 《阅读写作 赋能美好人生》</div>
+                <div class="book-desc">作者8年读写实践的精华总结，展示阅读与写作如何让内心丰盈、人生有方向。通过持续的读写修炼，实现个人成长和生活品质的全面提升。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483852&idx=1&sn=90d783bdfe69538aaa69014f97a41ba7&chksm=c4cb0895f3bc81837d5f0a78edb9d84dfe10e2cab4037fe9d8319641ac7a9ec6e29631625000#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">16. 快速阅读</div></a>
-            <div class="book-desc">一本实践性极强的阅读指南，提供可立即上手的快速阅读技巧。通过系统训练，帮助读者在保证理解质量的前提下大幅提升阅读速度，高效获取知识。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483852&idx=1&sn=90d783bdfe69538aaa69014f97a41ba7&chksm=c4cb0895f3bc81837d5f0a78edb9d84dfe10e2cab4037fe9d8319641ac7a9ec6e29631625000#rd" target="_blank">
+                <div class="book-title">16. 《快速阅读》</div>
+                <div class="book-desc">一本实践性极强的阅读指南，提供可立即上手的快速阅读技巧。通过系统训练，帮助读者在保证理解质量的前提下大幅提升阅读速度，高效获取知识。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483874&idx=1&sn=850f3739ec54478f571863c0dbe8c549&chksm=c4cb08bbf3bc81adbd3d5bdcb443d5d2daddddc70659abb820e92accb91e82a8880ec2c2309c#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">15. 这样读书就够了</div></a>
-            <div class="book-desc">超越"知行合一"的基础要求，提出更高层次的读书方法论。教会读者如何深度思考、批判性阅读，将书中知识内化为自己的思维体系，实现真正的知识升级。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483874&idx=1&sn=850f3739ec54478f571863c0dbe8c549&chksm=c4cb08bbf3bc81adbd3d5bdcb443d5d2daddddc70659abb820e92accb91e82a8880ec2c2309c#rd" target="_blank">
+                <div class="book-title">15. 《这样读书就够了》</div>
+                <div class="book-desc">超越"知行合一"的基础要求，提出更高层次的读书方法论。教会读者如何深度思考、批判性阅读，将书中知识内化为自己的思维体系，实现真正的知识升级。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483874&idx=1&sn=850f3739ec54478f571863c0dbe8c549&chksm=c4cb08bbf3bc81adbd3d5bdcb443d5d2daddddc70659abb820e92accb91e82a8880ec2c2309c#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">14. 过目不忘的读书法</div></a>
-            <div class="book-desc">强调读书是改变人生最强的王牌。提供科学的记忆方法和阅读技巧，帮助读者真正做到过目不忘，让每一本书都能在大脑中留下深刻印记，转化为实际能力。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483874&idx=1&sn=850f3739ec54478f571863c0dbe8c549&chksm=c4cb08bbf3bc81adbd3d5bdcb443d5d2daddddc70659abb820e92accb91e82a8880ec2c2309c#rd'," target="_blank">
+                <div class="book-title">14. 《过目不忘的读书法》</div>
+                <div class="book-desc">强调读书是改变人生最强的王牌。提供科学的记忆方法和阅读技巧，帮助读者真正做到过目不忘，让每一本书都能在大脑中留下深刻印记，转化为实际能力。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483891&idx=1&sn=d7734a5cca68308699c02123a9dabbed&chksm=c4cb08aaf3bc81bca1b4987e597e51c33677dd84ca4d45f6653897dc8812b5d232fd7f6d6fae#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">13. 高效阅读：掌控知识的魔法</div></a>
-            <div class="book-desc">颠覆传统学习观念，提出"知识不是学出来的"这一核心理念。教授如何通过高效阅读主动掌控知识，将被动学习转化为主动构建知识体系的能力。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483891&idx=1&sn=d7734a5cca68308699c02123a9dabbed&chksm=c4cb08aaf3bc81bca1b4987e597e51c33677dd84ca4d45f6653897dc8812b5d232fd7f6d6fae#rd" target="_blank">
+                <div class="book-title">13. 《高效阅读：掌控知识的魔法》</div>
+                <div class="book-desc">颠覆传统学习观念，提出"知识不是学出来的"这一核心理念。教授如何通过高效阅读主动掌控知识，将被动学习转化为主动构建知识体系的能力。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483891&idx=1&sn=d7734a5cca68308699c02123a9dabbed&chksm=c4cb08aaf3bc81bca1b4987e597e51c33677dd84ca4d45f6653897dc8812b5d232fd7f6d6fae#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">12. 一年顶十年</div></a>
-            <div class="book-desc">揭示超级赚钱的核心秘密——成为有思想魅力的人。通过提升个人思想深度和表达能力，建立独特的个人品牌，实现时间价值的指数级增长，让一年的成长抵得上别人十年。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483891&idx=1&sn=d7734a5cca68308699c02123a9dabbed&chksm=c4cb08aaf3bc81bca1b4987e597e51c33677dd84ca4d45f6653897dc8812b5d232fd7f6d6fae#rd'," target="_blank">
+                <div class="book-title">12. 《一年顶十年》</div>
+                <div class="book-desc">揭示超级赚钱的核心秘密——成为有思想魅力的人。通过提升个人思想深度和表达能力，建立独特的个人品牌，实现时间价值的指数级增长，让一年的成长抵得上别人十年。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483904&idx=1&sn=8c12b73efe534988ac180f3033de0c54&chksm=c4cb0b59f3bc824fe4548105f6cbe92aebafac337a164b2021003391353df200b65211db638a#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">11. 快速阅读术</div></a>
-            <div class="book-desc">打破"快速阅读是天赋"的误区，证明任何人都可以通过正确的方法掌握快速阅读技能。提供科学的训练体系，帮助读者大幅提升阅读速度的同时保持理解深度。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483904&idx=1&sn=8c12b73efe534988ac180f3033de0c54&chksm=c4cb0b59f3bc824fe4548105f6cbe92aebafac337a164b2021003391353df200b65211db638a#rd" target="_blank">
+                <div class="book-title">11. 《快速阅读术》</div>
+                <div class="book-desc">打破"快速阅读是天赋"的误区，证明任何人都可以通过正确的方法掌握快速阅读技能。提供科学的训练体系，帮助读者大幅提升阅读速度的同时保持理解深度。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483904&idx=1&sn=8c12b73efe534988ac180f3033de0c54&chksm=c4cb0b59f3bc824fe4548105f6cbe92aebafac337a164b2021003391353df200b65211db638a#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">10. 读懂一本书：樊登读书法</div></a>
-            <div class="book-desc">樊登亲授的读书方法论，系统讲解如何真正读懂一本书。从选书、阅读到吸收转化，提供完整的阅读体系，帮助读者提升阅读效率，将书中知识转化为实际能力。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483904&idx=1&sn=8c12b73efe534988ac180f3033de0c54&chksm=c4cb0b59f3bc824fe4548105f6cbe92aebafac337a164b2021003391353df200b65211db638a#rd'," target="_blank">
+                <div class="book-title">10. 《读懂一本书：樊登读书法》</div>
+                <div class="book-desc">樊登亲授的读书方法论，系统讲解如何真正读懂一本书。从选书、阅读到吸收转化，提供完整的阅读体系，帮助读者提升阅读效率，将书中知识转化为实际能力。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483928&idx=1&sn=228caf271ef7221a3a9c9353abf19219&chksm=c4cb0b41f3bc82577ff359d2eda84dde6386f5bd5daa1d4257a5cbe23b7ff3eeadf358240adf#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">9. 明智创富指南</div></a>
-            <div class="book-desc">提出"好好做自己，是世间最好的生意"的创富理念。引导读者发现自身独特价值，通过真实表达和专注深耕，在自我实现的同时创造财富，实现事业与人生的双重成功。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483928&idx=1&sn=228caf271ef7221a3a9c9353abf19219&chksm=c4cb0b41f3bc82577ff359d2eda84dde6386f5bd5daa1d4257a5cbe23b7ff3eeadf358240adf#rd" target="_blank">
+                <div class="book-title">9. 《明智创富指南》</div>
+                <div class="book-desc">提出"好好做自己，是世间最好的生意"的创富理念。引导读者发现自身独特价值，通过真实表达和专注深耕，在自我实现的同时创造财富，实现事业与人生的双重成功。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483928&idx=1&sn=228caf271ef7221a3a9c9353abf19219&chksm=c4cb0b41f3bc82577ff359d2eda84dde6386f5bd5daa1d4257a5cbe23b7ff3eeadf358240adf#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">8. 小米创业思考</div></a>
-            <div class="book-desc">分享小米的创业历程和商业智慧，阐述"优秀的公司赚取利润，伟大的公司赢得人心"的核心理念。通过小米YU7等案例，展示如何通过极致的用户体验和真诚的态度赢得市场。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483928&idx=1&sn=228caf271ef7221a3a9c9353abf19219&chksm=c4cb0b41f3bc82577ff359d2eda84dde6386f5bd5daa1d4257a5cbe23b7ff3eeadf358240adf#rd'," target="_blank">
+                <div class="book-title">8. 《小米创业思考》</div>
+                <div class="book-desc">分享小米的创业历程和商业智慧，阐述"优秀的公司赚取利润，伟大的公司赢得人心"的核心理念。通过小米YU7等案例，展示如何通过极致的用户体验和真诚的态度赢得市场。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483943&idx=1&sn=f3a01ebe260436750ce9ef3d7559a195&chksm=c4cb0b7ef3bc8268a83a13b0347c42182a30f96c891c90cb63a37c04fc682054a5d292217fe6#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">7. 微信背后的产品观</div></a>
-            <div class="book-desc">深度解析微信之父张小龙的产品哲学，揭示微信成功背后的设计理念和思考方式。通过学习张小龙的产品观，帮助读者理解如何打造真正以用户为中心的优秀产品。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483943&idx=1&sn=f3a01ebe260436750ce9ef3d7559a195&chksm=c4cb0b7ef3bc8268a83a13b0347c42182a30f96c891c90cb63a37c04fc682054a5d292217fe6#rd" target="_blank">
+                <div class="book-title">7. 《微信背后的产品观》</div>
+                <div class="book-desc">深度解析微信之父张小龙的产品哲学，揭示微信成功背后的设计理念和思考方式。通过学习张小龙的产品观，帮助读者理解如何打造真正以用户为中心的优秀产品。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483943&idx=1&sn=f3a01ebe260436750ce9ef3d7559a195&chksm=c4cb0b7ef3bc8268a83a13b0347c42182a30f96c891c90cb63a37c04fc682054a5d292217fe6#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">6. 写出我心：普通人如何通过写作表达自己</div></a>
-            <div class="book-desc">写作大师娜塔莉·戈德堡的经典之作，教导普通人如何通过写作找到真实的自我。书中13条核心建议帮助读者打破写作障碍，用文字真诚地表达内心世界，实现自我疗愈与成长。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483943&idx=1&sn=f3a01ebe260436750ce9ef3d7559a195&chksm=c4cb0b7ef3bc8268a83a13b0347c42182a30f96c891c90cb63a37c04fc682054a5d292217fe6#rd'," target="_blank">
+                <div class="book-title">6. 《写出我心：普通人如何通过写作表达自己》</div>
+                <div class="book-desc">写作大师娜塔莉·戈德堡的经典之作，教导普通人如何通过写作找到真实的自我。书中13条核心建议帮助读者打破写作障碍，用文字真诚地表达内心世界，实现自我疗愈与成长。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483982&idx=1&sn=7882e8782883aba5283d82db42fac8a2&chksm=c4cb0b17f3bc82015ed33d87eb12dd342b3718abadc3279f9fcb9f5797c229ab8595f2f05bd6#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">5. 写作高手速成手册</div></a>
-            <div class="book-desc">聚焦写作过程中最常见的5大困境，提供针对性的解决方案。强调行动的重要性，鼓励读者在解决基础问题后立即开始实践，通过持续写作快速提升写作能力。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483982&idx=1&sn=7882e8782883aba5283d82db42fac8a2&chksm=c4cb0b17f3bc82015ed33d87eb12dd342b3718abadc3279f9fcb9f5797c229ab8595f2f05bd6#rd" target="_blank">
+                <div class="book-title">5. 《写作高手速成手册》</div>
+                <div class="book-desc">聚焦写作过程中最常见的5大困境，提供针对性的解决方案。强调行动的重要性，鼓励读者在解决基础问题后立即开始实践，通过持续写作快速提升写作能力。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483982&idx=1&sn=7882e8782883aba5283d82db42fac8a2&chksm=c4cb0b17f3bc82015ed33d87eb12dd342b3718abadc3279f9fcb9f5797c229ab8595f2f05bd6#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">4. 学会写作2.0</div></a>
-            <div class="book-desc">针对写作新手的实用指南，解决"不知道写什么"和"不知道怎么写"的核心困境。提供具体可操作的写作框架和技巧，帮助读者快速上手，建立写作信心，开启写作之旅。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247483982&idx=1&sn=7882e8782883aba5283d82db42fac8a2&chksm=c4cb0b17f3bc82015ed33d87eb12dd342b3718abadc3279f9fcb9f5797c229ab8595f2f05bd6#rd'," target="_blank">
+                <div class="book-title">4. 《学会写作2.0》</div>
+                <div class="book-desc">针对写作新手的实用指南，解决"不知道写什么"和"不知道怎么写"的核心困境。提供具体可操作的写作框架和技巧，帮助读者快速上手，建立写作信心，开启写作之旅。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484023&idx=1&sn=6f6b3e7606f2f3c1f47565c02ab71752&chksm=c4cb0b2ef3bc82382ff80efb07f6f8a5bb4c4dce98ceafb561e8ba317f44fb62c7fe230ef6e8#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">3. 左手阅读，右手写作</div></a>
-            <div class="book-desc">强调阅读与写作是人生最值得投入的两项技能。通过系统化的方法论，教会读者如何将阅读输入高效转化为写作输出，形成知识的闭环循环，实现个人成长的加速度。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484023&idx=1&sn=6f6b3e7606f2f3c1f47565c02ab71752&chksm=c4cb0b2ef3bc82382ff80efb07f6f8a5bb4c4dce98ceafb561e8ba317f44fb62c7fe230ef6e8#rd" target="_blank">
+                <div class="book-title">3. 《左手阅读，右手写作》</div>
+                <div class="book-desc">强调阅读与写作是人生最值得投入的两项技能。通过系统化的方法论，教会读者如何将阅读输入高效转化为写作输出，形成知识的闭环循环，实现个人成长的加速度。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484023&idx=1&sn=6f6b3e7606f2f3c1f47565c02ab71752&chksm=c4cb0b2ef3bc82382ff80efb07f6f8a5bb4c4dce98ceafb561e8ba317f44fb62c7fe230ef6e8#rd'," target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">2. 高手之路</div></a>
-            <div class="book-desc">深入剖析普通人与高手的本质差异，揭示大多数人停留在"普通"层级的真正原因。书中指出，成为高手不仅需要努力，更需要正确的思维方式和系统化的成长路径，帮助读者找到突破瓶颈的关键要素。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484023&idx=1&sn=6f6b3e7606f2f3c1f47565c02ab71752&chksm=c4cb0b2ef3bc82382ff80efb07f6f8a5bb4c4dce98ceafb561e8ba317f44fb62c7fe230ef6e8#rd'," target="_blank">
+                <div class="book-title">2. 《高手之路》</div>
+                <div class="book-desc">深入剖析普通人与高手的本质差异，揭示大多数人停留在"普通"层级的真正原因。书中指出，成为高手不仅需要努力，更需要正确的思维方式和系统化的成长路径，帮助读者找到突破瓶颈的关键要素。</div>
+            </a>
         </div>
 
         <div class="book-item">
-            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484065&idx=1&sn=b8da14dfe1bccf6524243cff9381b1d8&chksm=c4cb0bf8f3bc82ee291391bc2ff7830d74eb5b617175bd707d183de92d449d87f0d50330e978#rd" target="_blank" style="text-decoration: none; color: inherit;"><div class="book-title">1. 十倍比两倍更容易</div></a>
-            <div class="book-desc">本书颠覆传统思维，提出做更少反而更容易成功的理念。通过聚焦核心目标，放弃80%的低效努力，专注于真正能带来10倍增长的20%关键事项，帮助读者突破线性增长的困境，实现指数级跃迁。</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=Mzk3NTUyNzk5MA==&mid=2247484065&idx=1&sn=b8da14dfe1bccf6524243cff9381b1d8&chksm=c4cb0bf8f3bc82ee291391bc2ff7830d74eb5b617175bd707d183de92d449d87f0d50330e978#rd" target="_blank">
+                <div class="book-title">1. 《十倍比两倍更容易》</div>
+                <div class="book-desc">本书颠覆传统思维，提出做更少反而更容易成功的理念。通过聚焦核心目标，放弃80%的低效努力，专注于真正能带来10倍增长的20%关键事项，帮助读者突破线性增长的困境，实现指数级跃迁。</div>
+            </a>
         </div>
     </div>
 </body>
