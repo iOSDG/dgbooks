@@ -103,9 +103,10 @@
         <div class="auth-section" id="auth-section">
             <div id="g_id_onload"
                  data-client_id="REDACTED_GOOGLE_CLIENT_ID"
-                 data-callback="handleCredentialResponse">
+                 data-callback="handleCredentialResponse"
+                 data-auto_prompt="false">
             </div>
-            <div class="g_id_signin" data-type="standard" id="google-signin-btn"></div>
+            <div class="g_id_signin" data-type="standard"></div>
             <div id="user-info" class="user-info" style="display:none;">
                 <img id="user-avatar" class="user-avatar" src="" alt="Avatar">
                 <span id="user-name"></span>
@@ -243,20 +244,22 @@
 
     <script>
         async function handleCredentialResponse(response) {
+            const userInfo = parseJwt(response.credential);
+            
+            // 发送到后端保存
             try {
-                const res = await fetch('/api/auth/google', {
+                await fetch('/api/auth/google', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ credential: response.credential })
                 });
-                const data = await res.json();
-                if (data.success) {
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    displayUser(data.user);
-                }
             } catch (error) {
-                console.error('登录失败:', error);
+                console.error('保存失败:', error);
             }
+            
+            // 显示用户信息
+            localStorage.setItem('user', JSON.stringify(userInfo));
+            displayUser(userInfo);
         }
 
         function parseJwt(token) {
@@ -266,7 +269,7 @@
         }
 
         function displayUser(user) {
-            document.getElementById('google-signin-btn').style.display = 'none';
+            document.querySelector('.g_id_signin').style.display = 'none';
             document.getElementById('user-info').style.display = 'flex';
             document.getElementById('user-avatar').src = user.picture;
             document.getElementById('user-name').textContent = user.name;
@@ -274,9 +277,7 @@
 
         function logout() {
             localStorage.removeItem('user');
-            document.getElementById('google-signin-btn').style.display = 'block';
-            document.getElementById('user-info').style.display = 'none';
-            google.accounts.id.disableAutoSelect();
+            location.reload();
         }
 
         window.onload = function() {
