@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>读书合集 - DG Books</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <style>
         * {
             margin: 0;
@@ -84,18 +85,6 @@
         .logout-btn:hover {
             background: #c82333;
         }
-        .google-login-btn {
-            display: inline-block;
-            background: #4285f4;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .google-login-btn:hover {
-            background: #357ae8;
-        }
         @media (max-width: 768px) {
             .container {
                 padding: 20px 15px;
@@ -112,7 +101,12 @@
 <body>
     <div class="container">
         <div class="auth-section" id="auth-section">
-            <a href="/api/auth/google" class="google-login-btn">使用 Google 登录</a>
+            <div id="g_id_onload"
+                 data-client_id="REDACTED_GOOGLE_CLIENT_ID"
+                 data-login_uri="https://booksdg.com/api/auth/callback/google"
+                 data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
             <div id="user-info" class="user-info" style="display:none;">
                 <img id="user-avatar" class="user-avatar" src="" alt="Avatar">
                 <span id="user-name"></span>
@@ -250,7 +244,7 @@
 
     <script>
         function displayUser(user) {
-            document.querySelector('.google-login-btn').style.display = 'none';
+            document.querySelector('.g_id_signin').style.display = 'none';
             document.getElementById('user-info').style.display = 'flex';
             document.getElementById('user-avatar').src = user.picture;
             document.getElementById('user-name').textContent = user.name;
@@ -262,19 +256,9 @@
         }
 
         window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const userParam = urlParams.get('user');
-            
-            if (userParam) {
-                const user = JSON.parse(decodeURIComponent(userParam));
-                localStorage.setItem('user', JSON.stringify(user));
-                displayUser(user);
-                window.history.replaceState({}, '', '/');
-            } else {
-                const savedUser = localStorage.getItem('user');
-                if (savedUser) {
-                    displayUser(JSON.parse(savedUser));
-                }
+            const savedUser = localStorage.getItem('user');
+            if (savedUser) {
+                displayUser(JSON.parse(savedUser));
             }
         };
     </script>
