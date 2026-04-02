@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录中...</title>
+</head>
+<body>
+    <p id="status">正在处理登录...</p>
+    <script>
+        const API_BASE = 'https://booksdg.com'; // 你的后端 API 地址
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        document.getElementById('status').textContent = '获取到的参数: ' + (code ? 'code=' + code.substring(0, 20) + '...' : '无参数');
+        
+        if (code) {
+            document.getElementById('status').textContent = '正在保存用户信息...';
+            
+            fetch(API_BASE + '/api/auth/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: code })
+            })
+            .then(async res => {
+                const text = await res.text();
+                if (!text) throw new Error('服务器返回空响应');
+                try {
+                    return JSON.parse(text);
+                } catch (e) {
+                    throw new Error('服务器返回非 JSON: ' + text.substring(0, 100));
+                }
+            })
+            .then(data => {
+                if (data.success) {
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    document.getElementById('status').textContent = '登录成功，正在跳转...';
+                    setTimeout(() => window.location.href = '/', 1000);
+                } else {
+                    document.getElementById('status').textContent = '登录失败: ' + (data.error || '未知错误');
+                }
+            })
+            .catch(err => {
+                document.getElementById('status').textContent = '请求失败: ' + err.message;
+            });
+        } else {
+            document.getElementById('status').textContent = '错误：未获取到授权码';
+        }
+    </script>
+</body>
+</html>
