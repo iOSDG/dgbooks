@@ -22,55 +22,46 @@
     <script>
         const API_BASE = 'https://api.booksdg.com';
 
-        // 防止重复提交
-        if (sessionStorage.getItem('auth_processing')) {
-            document.getElementById('status').textContent = '登录处理中，请稍候...';
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+
+        if (!code) {
+            document.getElementById('status').className = 'status error';
+            document.getElementById('status').textContent = '错误：未获取到授权码，请重新登录';
         } else {
-            sessionStorage.setItem('auth_processing', '1');
+            // 立刻清除 URL 中的 code，防止刷新重复使用
+            window.history.replaceState({}, document.title, '/callback.html');
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const code = urlParams.get('code');
+            document.getElementById('status').textContent = '正在验证身份...';
 
-            if (!code) {
-                document.getElementById('status').className = 'status error';
-                document.getElementById('status').textContent = '错误：未获取到授权码';
-            } else {
-                // 立刻清除 URL 中的 code，防止刷新重复使用
-                window.history.replaceState({}, document.title, '/callback.html');
+            fetch(API_BASE + '/api/auth/save', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ code: code })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    const user = data.user;
+                    localStorage.setItem('user', JSON.stringify(user));
 
-                document.getElementById('status').textContent = '正在验证身份...';
-
-                fetch(API_BASE + '/api/auth/save', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ code: code })
-                })
-                .then(res => res.json())
-                .then(data => {
-                    sessionStorage.removeItem('auth_processing');
-                    if (data.success) {
-                        const user = data.user;
-                        localStorage.setItem('user', JSON.stringify(user));
-
-                        // 展示用户头像和昵称
-                        document.getElementById('content').innerHTML = `
-                            <img class="avatar" src="${user.picture}" alt="头像" onerror="this.style.display='none'">
-                            <div class="name">${user.name}</div>
-                            <div class="email">${user.email}</div>
-                            <p class="status">登录成功！正在跳转...</p>
-                        `;
-                        setTimeout(() => window.location.href = '/', 1500);
-                    } else {
-                        document.getElementById('status').className = 'status error';
-                        document.getElementById('status').textContent = '登录失败: ' + (data.error || '未知错误');
-                    }
-                })
-                .catch(err => {
-                    sessionStorage.removeItem('auth_processing');
+                    // 展示用户头像和昵称
+                    document.getElementById('content').innerHTML = `
+                        <img class="avatar" src="${user.picture}" alt="头像" onerror="this.style.display='none'">
+                        <div class="name">${user.name}</div>
+                        <div class="email">${user.email}</div>
+                        <p class="status">登录成功！正在跳转...</p>
+                    `;
+                    setTimeout(() => window.location.href = '/', 1500);
+                } else {
                     document.getElementById('status').className = 'status error';
-                    document.getElementById('status').textContent = '请求失败: ' + err.message;
-                });
-            }
+                    document.getElementById('status').textContent = '登录失败: ' + (data.error || '未知错误');
+                }
+            })
+            .catch(err => {
+                document.getElementById('status').className = 'status error';
+                document.getElementById('status').textContent = '请求失败: ' + err.message;
+            });
         }
     </script>
 </body>
